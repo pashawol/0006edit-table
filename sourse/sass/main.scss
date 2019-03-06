@@ -1,0 +1,105 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "bourbon";
+@import "vars";
+@import "bootstrap/bootstrap";
+// // @import "../libs/animate";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fontawesome";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-brands";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-regular";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-solid";
+// @import "fontawesome-pro-5.0.8/web-fonts-with-css/scss/fa-light";
+// // @import "../libs/magnificPopup/magnific-popup";
+// // @import "../libs/swiper-4.2.0/dist/css/swiper";
+// // @import "../libs/select2-4.0.6-rc.1/dist/css/select2.min";
+// // @import "../libs/dropzone";
+// // @import "../libs/gijgo-master/dist/combined/css/gijgo";
+// // @import "../libs/gijgo-master/dist/combined/css/demo.min";
+// // @import "../libs/slick/slick1";
+// // @import "../libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider";
+// // @import "../libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5";
+
+// @import "base";
+
+
+// @import "../../public/img/svg/_sprite";
+
+// @import "../pug/blocks/mixin-wrap/mixin-wrap";
+// @import "../pug/blocks/form-wrap/form-wrap";
+// @import "../pug/blocks/header/_header";
+// @import "../pug/blocks/top-line/top-line";
+// @import "../pug/blocks/top-nav/top-nav";
+
+
+// @import "../pug/blocks/header-block/_header-block";
+// @import "../pug/blocks/s-content/_s-content";
+// @import "../pug/blocks/s-contact/_s-contact";
+
+
+// @import "../pug/blocks/s-form/s-form";
+// @import "../pug/blocks/footer/footer";
+// @import "../pug/blocks/modal/modal";
+
+// @import "media";// Всегда в конце
+
+.table-wrap{
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+}
+.table-block{
+  &__row{
+
+    display: flex;
+  }
+  &__col{
+    // flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: (100% / 6);
+  }
+  &__item{ 
+    min-height: 1px;
+    &--head{
+      height: 29px;
+      text-align: center;
+    }
+    &--row-title{
+      border: 1px solid #ccc;
+      height: 32px;
+      padding: 5px 10px;
+      // border-right: none;
+      // &:not(:last-child){
+
+      //   bor
+      // }
+    }
+    &.remove{
+      textarea{
+
+        display: none;
+        position: absolute;
+        border: none;
+      }
+    }
+    &--body{
+      // margin-left: -1px;
+      // margin-top: -1px;
+      textarea{
+        resize: none;
+        border: 1px solid #ccc;
+        width: 100%;
+        vertical-align: middle;
+        height: 32px;
+        padding: 5px 10px;
+        line-height: 1;
+        &:focus{
+          z-index: 20;
+          // outline: none !important;
+          // box-shadow: 0 0 
+        }
+      }
+    }
+  }
+}

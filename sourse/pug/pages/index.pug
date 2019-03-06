@@ -1,0 +1,52 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+
+block title
+	title title
+
+block pagecontent
+	.table-wrap
+		
+		+b.table-block--js
+			+e.row
+				+e.col
+				+e.col
+					+e.item--head Равномерный 
+				+e.col
+					+e.item--head Слабоубывающий
+				+e.col
+					+e.item--head Сильноубывающий
+				+e.col
+					+e.item--head Сезонный
+				+e.col
+					+e.item--head Специальный
+			+e.row--body
+				+e.col 
+					+e.item--body.--row-title Комиссия
+					+e.item--body.--row-title Аванс
+					+e.item--body.--row-title 1 месяц
+					+e.item--body.--row-title 2 месяц
+					+e.item--body.--row-title 3 месяц
+					+e.item--body.--row-title 4 месяц
+					+e.item--body.--row-title 5 месяц
+					+e.item--body.--row-title 6 месяц
+					+e.item--body.--row-title 7 месяц
+					+e.item--body.--row-title 8 месяц
+					+e.item--body.--row-title 9 месяц
+					+e.item--body.--row-title 10 месяц
+					+e.item--body.--row-title 11 месяц
+					+e.item--body.--row-title 12 месяц  
+				mixin col(t)
+					+e.col--js 
+						- for (var x = 0; x < 14; x++)
+							+e.item--body.--js
+								textarea()
+				- for (var x = 0; x < 5; x++)
+					+col('')
+			//- +col('Слабоубывающий')
+			//- +col('Сильноубывающий	')
+			//- +col('Сезонный')
+			//- +col('Специальный')
